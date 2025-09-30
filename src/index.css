@@ -46,8 +46,13 @@
     --canyon-red: 0 75% 45%;
     --road-black: 0 0% 8%;
     --neon-green: 120 100% 35%;
+    --whatsapp-green: 142 70% 49%;
+    --whatsapp-green-dark: 142 70% 40%;
     --vegas-gold: 45 85% 50%;
     --sky-blue: 200 85% 60%;
+    --pure-white: 0 0% 100%;
+    --off-white: 40 20% 97%;
+    --light-gray: 0 0% 88%;
 
     /* Gradients */
     --gradient-desert: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--canyon-red)));
@@ -173,6 +178,10 @@
     animation: pulse-glow 2s ease-in-out infinite;
   }
 
+  .animate-pulse-glow-disabled {
+    /* No animation - solid state */
+  }
+
   .animate-slide-up {
     animation: slide-up 1s ease-out;
   }
@@ -234,6 +243,26 @@
 
   .text-vegas-gold {
     color: hsl(var(--vegas-gold));
+  }
+
+  .bg-whatsapp-green {
+    background-color: hsl(var(--whatsapp-green));
+  }
+
+  .bg-whatsapp-green-dark {
+    background-color: hsl(var(--whatsapp-green-dark));
+  }
+
+  .text-pure-white {
+    color: hsl(var(--pure-white));
+  }
+
+  .text-off-white {
+    color: hsl(var(--off-white));
+  }
+
+  .text-light-gray {
+    color: hsl(var(--light-gray));
   }
 }
 

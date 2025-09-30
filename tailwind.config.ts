@@ -63,8 +63,13 @@ export default {
         "canyon-red": "hsl(var(--canyon-red))",
         "road-black": "hsl(var(--road-black))",
         "neon-green": "hsl(var(--neon-green))",
+        "whatsapp-green": "hsl(var(--whatsapp-green))",
+        "whatsapp-green-dark": "hsl(var(--whatsapp-green-dark))",
         "vegas-gold": "hsl(var(--vegas-gold))",
         "sky-blue": "hsl(var(--sky-blue))",
+        "pure-white": "hsl(var(--pure-white))",
+        "off-white": "hsl(var(--off-white))",
+        "light-gray": "hsl(var(--light-gray))",
       },
       borderRadius: {
         lg: "var(--radius)",

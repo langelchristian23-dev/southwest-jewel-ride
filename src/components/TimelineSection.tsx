@@ -97,10 +97,10 @@ export function TimelineSection() {
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-epic">
-            <span className="text-gradient-desert">10 Tage</span>
-            <span className="text-white"> pures Abenteuer</span>
+            <span className="text-canyon-red">10 Tage</span>
+            <span className="text-pure-white"> pures Abenteuer</span>
           </h2>
-          <p className="text-xl text-desert-sand max-w-3xl mx-auto">
+          <p className="text-xl text-off-white max-w-3xl mx-auto">
             Tag für Tag führt dich diese einzigartige Route durch die spektakulärsten Landschaften 
             des amerikanischen Südwestens. Jede Etappe bietet neue Höhepunkte.
           </p>
@@ -146,12 +146,12 @@ export function TimelineSection() {
                         <h3 className="text-2xl font-bold text-sunset-orange mb-3">
                           {day.title}
                         </h3>
-                        <p className="text-foreground mb-4 leading-relaxed">
+                        <p className="text-light-gray mb-4 leading-relaxed">
                           {day.description}
                         </p>
                         
                         <div className="mb-4">
-                          <h4 className="font-semibold text-white mb-2 flex items-center">
+                          <h4 className="font-semibold text-pure-white mb-2 flex items-center">
                             <Camera className="w-4 h-4 mr-2" />
                             Highlights:
                           </h4>
@@ -186,7 +186,7 @@ export function TimelineSection() {
             <h3 className="text-3xl font-bold text-sunset-orange mb-4">
               Bereit für das Abenteuer deines Lebens?
             </h3>
-            <p className="text-foreground mb-6">
+            <p className="text-light-gray mb-6">
               Diese 10 Tage werden dich für immer verändern. Sichere dir jetzt deinen Platz 
               auf dieser einzigartigen Motorradreise durch den amerikanischen Südwesten.
             </p>

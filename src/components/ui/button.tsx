@@ -16,7 +16,7 @@ const buttonVariants = cva(
         ghost: "hover:bg-accent hover:text-accent-foreground",
         link: "text-primary underline-offset-4 hover:underline",
         // Epic CTA Buttons
-        whatsapp: "cta-gradient text-white font-bold tracking-wide shadow-epic hover:scale-105 transform transition-all duration-300 animate-pulse-glow",
+        whatsapp: "bg-whatsapp-green hover:bg-whatsapp-green-dark text-white font-bold tracking-wide shadow-card hover:shadow-glow transform hover:scale-105 transition-all duration-300",
         hero: "desert-gradient text-white font-bold text-lg shadow-glow hover:shadow-epic transform hover:scale-105 transition-all duration-300",
         epic: "bg-sunset-orange text-white font-bold shadow-card hover:bg-canyon-red transform hover:scale-105 transition-all duration-300",
       },

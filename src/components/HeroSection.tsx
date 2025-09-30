@@ -30,15 +30,15 @@ export function HeroSection() {
           
           {/* Right side - Content */}
           <div className="md:pl-8 text-center md:text-left animate-slide-up">
-            <h1 className="text-4xl md:text-6xl font-bold mb-6 text-epic">
-              <span className="text-gradient-desert">Süd-West Juwelen</span>
+            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-epic">
+              <span className="text-pure-white">Süd-West Juwelen</span>
               <br />
-              <span className="text-white">Auf zwei Rädern durch</span>
+              <span className="text-pure-white">Auf zwei Rädern durch</span>
               <br />
-              <span className="text-sunset-orange">Amerikas Naturwunder</span>
+              <span className="text-canyon-red">Amerikas Naturwunder</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-desert-sand leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-off-white leading-relaxed">
               Von den glitzernden Lichtern von Las Vegas bis zu den endlosen Weiten des Monument Valley – 
               erlebe die schönsten Nationalparks des Südwestens auf deiner Traum-Motorradreise.
             </p>
@@ -53,7 +53,7 @@ export function HeroSection() {
               ].map((usp, index) => (
                 <div key={index} className="flex items-center space-x-3">
                   <CheckCircle className="w-6 h-6 text-neon-green flex-shrink-0" />
-                  <span className="text-white font-medium">{usp}</span>
+                  <span className="text-pure-white font-medium">{usp}</span>
                 </div>
               ))}
             </div>

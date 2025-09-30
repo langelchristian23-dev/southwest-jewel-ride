@@ -1,5 +1,7 @@
 import { HeroSection } from "@/components/HeroSection";
 import { EmotionalStorySection } from "@/components/EmotionalStorySection";
+import { Footer } from "@/components/Footer";
+import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { AttractionsSection } from "@/components/AttractionsSection";
 import { TimelineSection } from "@/components/TimelineSection";
 import { HighlightsSection } from "@/components/HighlightsSection";
@@ -24,6 +26,10 @@ const Index = () => {
       <PricingSection />
       <FAQSection />
       <FinalSection />
+      <Footer />
+
+      {/* Sticky WhatsApp Button */}
+      <WhatsAppButton sticky />
     </div>
   );
 };
