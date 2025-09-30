@@ -11,6 +11,7 @@ import { TestimonialsSection } from "@/components/TestimonialsSection";
 import { PricingSection } from "@/components/PricingSection";
 import { FAQSection } from "@/components/FAQSection";
 import { FinalSection } from "@/components/FinalSection";
+import { CookieBanner } from "@/components/CookieBanner";
 
 const Index = () => {
   return (
@@ -30,6 +31,9 @@ const Index = () => {
 
       {/* Sticky WhatsApp Button */}
       <WhatsAppButton sticky />
+      
+      {/* Cookie Banner */}
+      <CookieBanner />
     </div>
   );
 };
