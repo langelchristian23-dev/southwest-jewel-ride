@@ -4,7 +4,7 @@ import reinerImage from "@/assets/reiner.png";
 
 export function GuideSection() {
   return (
-    <section className="py-24 hero-gradient relative">
+    <section className="py-12 sm:py-16 md:py-24 hero-gradient relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-epic">

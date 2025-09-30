@@ -54,7 +54,7 @@ const pricingPlans = [
 
 export function PricingSection() {
   return (
-    <section className="py-24 bg-road-black relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 bg-road-black relative overflow-hidden">
       {/* Background Pattern */}
       <div className="absolute inset-0 opacity-5">
         <div className="w-full h-full" 

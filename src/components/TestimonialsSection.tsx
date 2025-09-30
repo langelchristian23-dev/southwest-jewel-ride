@@ -60,7 +60,7 @@ const testimonials = [
 
 export function TestimonialsSection() {
   return (
-    <section className="py-24 hero-gradient relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 hero-gradient relative overflow-hidden">
       {/* Background Elements */}
       <div className="absolute inset-0 opacity-10">
         <div className="absolute top-20 left-10 w-32 h-32 bg-sunset-orange rounded-full blur-3xl animate-float"></div>
@@ -92,7 +92,7 @@ export function TestimonialsSection() {
                   <img 
                     src={testimonial.image}
                     alt={`${testimonial.name} - Amerika Heller Teilnehmer`}
-                    className="w-full h-full object-cover"
+                    className="w-full h-full object-cover object-center"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">

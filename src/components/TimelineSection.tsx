@@ -96,7 +96,7 @@ const timeline = [
 
 export function TimelineSection() {
   return (
-    <section className="py-24 hero-gradient relative">
+    <section className="py-12 sm:py-16 md:py-24 hero-gradient relative">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-6 text-epic">
@@ -114,7 +114,7 @@ export function TimelineSection() {
             <div key={index} className="relative">
               {/* Timeline line */}
               {index < timeline.length - 1 && (
-                <div className="absolute left-8 top-20 w-0.5 h-full bg-gradient-to-b from-sunset-orange to-canyon-red"></div>
+                <div className="hidden md:block absolute left-8 top-20 w-0.5 h-full bg-gradient-to-b from-sunset-orange to-canyon-red"></div>
               )}
 
               <div className="grid md:grid-cols-12 gap-4 md:gap-6 mb-8 md:mb-12">

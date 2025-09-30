@@ -6,7 +6,7 @@ import lakeMead from "@/assets/lake-mead.jpg";
 
 export function EmotionalStorySection() {
   return (
-    <section className="py-24 road-gradient relative overflow-hidden">
+    <section className="py-12 sm:py-16 md:py-24 road-gradient relative overflow-hidden">
       {/* Epic background pattern */}
       <div className="absolute inset-0 opacity-10">
         <div className="w-full h-full bg-repeat-x" 
