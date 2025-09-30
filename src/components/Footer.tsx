@@ -1,4 +1,5 @@
 import { WhatsAppButton } from "./WhatsAppButton";
+import amerikaHellerLogo from "@/assets/amerika-heller-logo.png";
 
 export function Footer() {
   return (
@@ -7,7 +8,11 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           {/* Brand Section */}
           <div className="md:col-span-1">
-            <h3 className="text-2xl font-bold text-pure-white mb-4">Amerika Heller</h3>
+            <img 
+              src={amerikaHellerLogo} 
+              alt="Amerika Heller Logo" 
+              className="h-12 mb-4"
+            />
             <p className="text-light-gray leading-relaxed">
               Ihr USA Motorradreisen Spezialist seit über 20 Jahren.<br />
               Authentische Route 66 Erlebnisse mit persönlicher Betreuung.
@@ -52,6 +57,7 @@ export function Footer() {
               text="Jetzt Infos per WhatsApp sichern"
               size="sm"
               className="w-full justify-center"
+              showIcon={false}
             />
           </div>
         </div>

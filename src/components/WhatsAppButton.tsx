@@ -6,13 +6,15 @@ interface WhatsAppButtonProps {
   className?: string;
   size?: "default" | "sm" | "lg";
   sticky?: boolean;
+  showIcon?: boolean;
 }
 
 export function WhatsAppButton({ 
   text = "Jetzt per WhatsApp kontaktieren", 
   className = "",
   size = "default",
-  sticky = false 
+  sticky = false,
+  showIcon = true
 }: WhatsAppButtonProps) {
   const handleWhatsAppClick = () => {
     const phone = "+17022771976";
@@ -30,7 +32,7 @@ export function WhatsAppButton({
         ${className}
       `}
     >
-      <MessageCircle className="w-5 h-5" />
+      {showIcon && <MessageCircle className="w-5 h-5" />}
       {!sticky && text}
     </Button>
   );
