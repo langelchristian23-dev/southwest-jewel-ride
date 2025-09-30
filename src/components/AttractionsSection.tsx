@@ -135,12 +135,12 @@ export function AttractionsSection() {
             </div>
           </div>
 
-          {/* Navigation */}
+          {/* Navigation - Hidden on mobile, shown on md+ */}
           <Button
             onClick={prevSlide}
             variant="epic"
             size="icon"
-            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 rounded-full"
+            className="hidden md:flex absolute left-4 top-1/2 transform -translate-y-1/2 z-10 rounded-full"
           >
             <ChevronLeft className="w-6 h-6" />
           </Button>
@@ -148,7 +148,7 @@ export function AttractionsSection() {
             onClick={nextSlide}
             variant="epic"
             size="icon"
-            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 rounded-full"
+            className="hidden md:flex absolute right-4 top-1/2 transform -translate-y-1/2 z-10 rounded-full"
           >
             <ChevronRight className="w-6 h-6" />
           </Button>
