@@ -7,29 +7,18 @@ import zionNationalPark from "@/assets/zion-national-park.jpg";
 export function HeroSection() {
   return (
     <section className="relative min-h-screen hero-gradient overflow-hidden">
-      {/* Background Image Overlay */}
-      <div className="absolute inset-0 bg-black/60 z-10"></div>
+      {/* Background Image */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center"
+        style={{ backgroundImage: `url(${valleyOfFire})` }}
+      ></div>
       
-      {/* Hero Images */}
-      <div className="absolute inset-0 grid md:grid-cols-2 gap-0">
-        <div 
-          className="bg-cover bg-center opacity-80"
-          style={{ backgroundImage: `url(${valleyOfFire})` }}
-        ></div>
-        <div 
-          className="bg-cover bg-center opacity-80 hidden md:block"
-          style={{ backgroundImage: `url(${zionNationalPark})` }}
-        ></div>
-      </div>
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-black/60 z-10"></div>
 
       {/* Content */}
-      <div className="relative z-20 container mx-auto px-4 min-h-screen flex items-center">
-        <div className="grid md:grid-cols-2 gap-8 items-center w-full">
-          {/* Left side - empty for image showcase on desktop */}
-          <div className="hidden md:block"></div>
-          
-          {/* Right side - Content */}
-          <div className="md:pl-8 text-center md:text-left animate-slide-up">
+      <div className="relative z-20 container mx-auto px-4 min-h-screen flex items-center justify-center">
+        <div className="max-w-5xl mx-auto text-center animate-slide-up">
             <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-epic leading-tight">
               <span className="text-pure-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Süd-West Juwelen</span>
               <br />
@@ -59,14 +48,13 @@ export function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <WhatsAppButton 
                 text="Jetzt Infos per WhatsApp sichern"
                 size="lg"
                 className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto"
               />
             </div>
-          </div>
         </div>
       </div>
 
