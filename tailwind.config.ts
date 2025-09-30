@@ -57,6 +57,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        // Epic Southwest Colors
+        "desert-sand": "hsl(var(--desert-sand))",
+        "sunset-orange": "hsl(var(--sunset-orange))",
+        "canyon-red": "hsl(var(--canyon-red))",
+        "road-black": "hsl(var(--road-black))",
+        "neon-green": "hsl(var(--neon-green))",
+        "vegas-gold": "hsl(var(--vegas-gold))",
+        "sky-blue": "hsl(var(--sky-blue))",
       },
       borderRadius: {
         lg: "var(--radius)",

@@ -2,41 +2,65 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Epic Motorcycle Tour Design System - Southwest Adventure */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    /* Epic Desert Colors */
+    --background: 0 0% 5%;
+    --foreground: 30 15% 95%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 8%;
+    --card-foreground: 30 15% 95%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 30 15% 95%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Fiery Sunset Orange Primary */
+    --primary: 16 85% 50%;
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Desert Sand Secondary */
+    --secondary: 35 45% 25%;
+    --secondary-foreground: 30 15% 95%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    /* Muted Canyon */
+    --muted: 20 15% 15%;
+    --muted-foreground: 30 20% 70%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    /* Accent Red Rock */
+    --accent: 0 75% 45%;
+    --accent-foreground: 0 0% 100%;
 
+    /* Destructive */
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 20 15% 20%;
+    --input: 20 15% 15%;
+    --ring: 16 85% 50%;
 
-    --radius: 0.5rem;
+    /* Epic Colors */
+    --desert-sand: 35 45% 70%;
+    --sunset-orange: 25 90% 55%;
+    --canyon-red: 0 75% 45%;
+    --road-black: 0 0% 8%;
+    --neon-green: 120 100% 35%;
+    --vegas-gold: 45 85% 50%;
+    --sky-blue: 200 85% 60%;
+
+    /* Gradients */
+    --gradient-desert: linear-gradient(135deg, hsl(var(--sunset-orange)), hsl(var(--canyon-red)));
+    --gradient-road: linear-gradient(180deg, hsl(var(--road-black)), hsl(20 15% 12%));
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 5%) 0%, hsl(20 15% 8%) 50%, hsl(0 0% 5%) 100%);
+    --gradient-cta: linear-gradient(135deg, hsl(var(--neon-green)), hsl(120 100% 40%));
+
+    /* Shadows */
+    --shadow-epic: 0 25px 50px -12px hsl(0 0% 0% / 0.8);
+    --shadow-glow: 0 0 40px hsl(var(--sunset-orange) / 0.3);
+    --shadow-card: 0 10px 30px hsl(0 0% 0% / 0.5);
+
+    --radius: 0.75rem;
 
     --sidebar-background: 0 0% 98%;
 
@@ -100,6 +124,145 @@ All colors MUST be HSL.
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground overflow-x-hidden;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+@layer components {
+  /* Epic Hero Styles */
+  .hero-gradient {
+    background: var(--gradient-hero);
+  }
+
+  .desert-gradient {
+    background: var(--gradient-desert);
+  }
+
+  .road-gradient {
+    background: var(--gradient-road);
+  }
+
+  .cta-gradient {
+    background: var(--gradient-cta);
+  }
+
+  /* Epic Shadows */
+  .shadow-epic {
+    box-shadow: var(--shadow-epic);
+  }
+
+  .shadow-glow {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-card);
+  }
+
+  /* Animations */
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite;
+  }
+
+  .animate-slide-up {
+    animation: slide-up 1s ease-out;
+  }
+
+  /* Text Styles */
+  .text-gradient-desert {
+    background: var(--gradient-desert);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .text-epic {
+    text-shadow: 2px 2px 4px hsl(0 0% 0% / 0.8);
+  }
+}
+
+@layer utilities {
+  /* Epic Colors */
+  .bg-desert-sand {
+    background-color: hsl(var(--desert-sand));
+  }
+
+  .bg-sunset-orange {
+    background-color: hsl(var(--sunset-orange));
+  }
+
+  .bg-canyon-red {
+    background-color: hsl(var(--canyon-red));
+  }
+
+  .bg-road-black {
+    background-color: hsl(var(--road-black));
+  }
+
+  .bg-neon-green {
+    background-color: hsl(var(--neon-green));
+  }
+
+  .bg-vegas-gold {
+    background-color: hsl(var(--vegas-gold));
+  }
+
+  .text-desert-sand {
+    color: hsl(var(--desert-sand));
+  }
+
+  .text-sunset-orange {
+    color: hsl(var(--sunset-orange));
+  }
+
+  .text-canyon-red {
+    color: hsl(var(--canyon-red));
+  }
+
+  .text-neon-green {
+    color: hsl(var(--neon-green));
+  }
+
+  .text-vegas-gold {
+    color: hsl(var(--vegas-gold));
+  }
+}
+
+/* Keyframes */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px hsl(var(--neon-green) / 0.5);
+  }
+  50% {
+    box-shadow: 0 0 40px hsl(var(--neon-green) / 0.8);
+  }
+}
+
+@keyframes slide-up {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
   }
 }

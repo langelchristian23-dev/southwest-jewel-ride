@@ -1,0 +1,179 @@
+import { useState } from "react";
+import { ChevronLeft, ChevronRight, MapPin } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { WhatsAppButton } from "./WhatsAppButton";
+import hooverDam from "@/assets/hoover-dam.jpg";
+import grandCanyon from "@/assets/grand-canyon.jpg";
+import monumentValley from "@/assets/monument-valley.jpg";
+import archesDelicateArch from "@/assets/arches-delicate-arch.jpg";
+import capitolReef from "@/assets/capitol-reef.jpg";
+import bryceCanyon from "@/assets/bryce-canyon.jpg";
+import escalanteMountains from "@/assets/escalante-mountains.jpg";
+import lakeMead from "@/assets/lake-mead.jpg";
+import lasVegasStrip from "@/assets/las-vegas-strip.jpg";
+
+const attractions = [
+  {
+    name: "Hoover Dam",
+    image: hooverDam,
+    story: "Ein Meisterwerk der Ingenieurskunst – dieser gewaltige Damm zwischen Nevada und Arizona ist ein Symbol menschlicher Schaffenskraft. Die Fahrt dorthin ist bereits ein Erlebnis für sich."
+  },
+  {
+    name: "Oatman Historic Route 66",
+    image: grandCanyon,
+    story: "Eine Geisterstadt mit wilden Eseln, die frei durch die Straßen wandeln. Hier spürst du die authentische Route 66 Atmosphäre vergangener Zeiten."
+  },
+  {
+    name: "Grand Canyon Nationalpark",
+    image: grandCanyon,
+    story: "Eines der sieben Naturwunder der Welt. Wenn du am Rand dieser gewaltigen Schlucht stehst, verstehst du, warum Millionen von Menschen hierher pilgern."
+  },
+  {
+    name: "Monument Valley",
+    image: monumentValley,
+    story: "Die ikonischste Wüstenlandschaft Amerikas. Hier wurden unzählige Western gedreht – du fühlst dich wie ein Cowboy in deinem eigenen Film."
+  },
+  {
+    name: "Forrest Gump Point",
+    image: monumentValley,
+    story: "Der berühmteste Straßenabschnitt der Filmgeschichte. Hier endete Forrest Gumps epischer Lauf – und hier beginnt dein unvergessliches Abenteuer."
+  },
+  {
+    name: "Arches Nationalpark",
+    image: archesDelicateArch,
+    story: "Über 2.000 natürliche Steinbögen warten darauf, von dir entdeckt zu werden. Der berühmte Delicate Arch ist das Wahrzeichen von Utah."
+  },
+  {
+    name: "Capitol Reef",
+    image: capitolReef,
+    story: "Eine versteckte Oase mit spektakulären roten Felsformationen und einer reichen Geschichte der Pioniere."
+  },
+  {
+    name: "Bryce Canyon",
+    image: bryceCanyon,
+    story: "Ein Amphitheater aus roten Felsnadeln, die 'Hoodoos' genannt werden. Bei Sonnenaufgang erstrahlt alles in einem magischen Licht."
+  },
+  {
+    name: "Zion Nationalpark", 
+    image: escalanteMountains,
+    story: "Majestätische Sandstein-Klippen und smaragdgrüne Pools schaffen eine Oase in der Wüste Utahs."
+  },
+  {
+    name: "Valley of Fire",
+    image: lakeMead,
+    story: "Feuerrote Felsformationen, die bei Sonnenuntergang wie Flammen leuchten. Ein wahrhaft mystischer Ort."
+  },
+  {
+    name: "Las Vegas Strip",
+    image: lasVegasStrip,
+    story: "Die Stadt, die niemals schläft. Nach Tagen in der Wildnis empfängst du die Neonlichter wie ein König der Straße."
+  }
+];
+
+export function AttractionsSection() {
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  const nextSlide = () => {
+    setCurrentIndex((prev) => (prev + 1) % attractions.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((prev) => (prev - 1 + attractions.length) % attractions.length);
+  };
+
+  return (
+    <section className="py-24 bg-road-black relative">
+      <div className="container mx-auto px-4">
+        <div className="text-center mb-16">
+          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-epic">
+            <span className="text-sunset-orange">Legendäre</span>
+            <span className="text-white"> Sehenswürdigkeiten</span>
+          </h2>
+          <p className="text-xl text-desert-sand max-w-3xl mx-auto">
+            Jeder Stopp erzählt seine eigene Geschichte – entdecke die Highlights, 
+            die deine Süd-West Juwelen Reise unvergesslich machen.
+          </p>
+        </div>
+
+        {/* Carousel */}
+        <div className="relative max-w-6xl mx-auto">
+          <div className="relative overflow-hidden rounded-2xl shadow-epic">
+            <div 
+              className="flex transition-transform duration-500 ease-in-out"
+              style={{ transform: `translateX(-${currentIndex * 100}%)` }}
+            >
+              {attractions.map((attraction, index) => (
+                <div key={index} className="w-full flex-shrink-0">
+                  <div className="grid md:grid-cols-2 gap-0 min-h-[500px]">
+                    <div className="relative">
+                      <img 
+                        src={attraction.image}
+                        alt={attraction.name}
+                        className="w-full h-full object-cover"
+                      />
+                      <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
+                    </div>
+                    <div className="bg-card p-8 md:p-12 flex flex-col justify-center">
+                      <div className="flex items-center mb-4">
+                        <MapPin className="w-6 h-6 text-sunset-orange mr-3" />
+                        <h3 className="text-2xl md:text-3xl font-bold text-sunset-orange">
+                          {attraction.name}
+                        </h3>
+                      </div>
+                      <p className="text-lg text-foreground leading-relaxed mb-6">
+                        {attraction.story}
+                      </p>
+                      <WhatsAppButton text="Mehr über diese Tour erfahren" />
+                    </div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Navigation */}
+          <Button
+            onClick={prevSlide}
+            variant="epic"
+            size="icon"
+            className="absolute left-4 top-1/2 transform -translate-y-1/2 z-10 rounded-full"
+          >
+            <ChevronLeft className="w-6 h-6" />
+          </Button>
+          <Button
+            onClick={nextSlide}
+            variant="epic"
+            size="icon"
+            className="absolute right-4 top-1/2 transform -translate-y-1/2 z-10 rounded-full"
+          >
+            <ChevronRight className="w-6 h-6" />
+          </Button>
+
+          {/* Dots */}
+          <div className="flex justify-center mt-8 space-x-2">
+            {attractions.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentIndex(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  index === currentIndex 
+                    ? 'bg-sunset-orange shadow-glow' 
+                    : 'bg-gray-600 hover:bg-gray-400'
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        {/* CTA */}
+        <div className="text-center mt-16">
+          <WhatsAppButton 
+            text="Jetzt Tourinfos via WhatsApp sichern"
+            size="lg"
+            className="text-lg px-8 py-4"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}
