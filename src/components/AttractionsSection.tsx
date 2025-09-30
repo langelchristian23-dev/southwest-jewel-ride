@@ -86,14 +86,14 @@ export function AttractionsSection() {
   };
 
   return (
-    <section className="py-24 bg-road-black relative">
+    <section className="py-16 sm:py-20 md:py-24 bg-road-black relative">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-epic">
+        <div className="text-center mb-12 sm:mb-14 md:mb-16">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-epic">
             <span className="text-sunset-orange">Legendäre</span>
             <span className="text-white"> Sehenswürdigkeiten</span>
           </h2>
-          <p className="text-xl text-desert-sand max-w-3xl mx-auto">
+          <p className="text-base sm:text-lg md:text-xl text-desert-sand max-w-3xl mx-auto px-4">
             Jeder Stopp erzählt seine eigene Geschichte – entdecke die Highlights, 
             die deine Süd-West Juwelen Reise unvergesslich machen.
           </p>
@@ -170,11 +170,11 @@ export function AttractionsSection() {
         </div>
 
         {/* CTA */}
-        <div className="text-center mt-16">
+        <div className="text-center mt-12 sm:mt-14 md:mt-16 px-4">
           <WhatsAppButton 
             text="Jetzt Tourinfos via WhatsApp sichern"
             size="lg"
-            className="text-lg px-8 py-4"
+            className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
           />
         </div>
       </div>

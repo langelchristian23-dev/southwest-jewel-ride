@@ -184,19 +184,19 @@ export function TimelineSection() {
         </div>
 
         {/* Final CTA */}
-        <div className="text-center mt-16">
-          <div className="bg-card/50 rounded-2xl p-8 max-w-2xl mx-auto backdrop-blur-sm">
-            <h3 className="text-3xl font-bold text-sunset-orange mb-4">
+        <div className="text-center mt-12 sm:mt-14 md:mt-16 px-4">
+          <div className="bg-card/50 rounded-xl md:rounded-2xl p-6 sm:p-8 max-w-2xl mx-auto backdrop-blur-sm">
+            <h3 className="text-2xl sm:text-3xl font-bold text-sunset-orange mb-3 sm:mb-4">
               Bereit für das Abenteuer deines Lebens?
             </h3>
-            <p className="text-light-gray mb-6">
+            <p className="text-sm sm:text-base text-light-gray mb-4 sm:mb-6">
               Diese 10 Tage werden dich für immer verändern. Sichere dir jetzt deinen Platz 
               auf dieser einzigartigen Motorradreise durch den amerikanischen Südwesten.
             </p>
             <WhatsAppButton 
               text="Jetzt Reise buchen"
               size="lg"
-              className="text-lg px-8 py-4"
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
             />
           </div>
         </div>

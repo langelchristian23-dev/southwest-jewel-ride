@@ -15,12 +15,12 @@ export function EmotionalStorySection() {
       </div>
 
       <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-6 text-epic">
+        <div className="text-center mb-12 md:mb-16 px-4">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold mb-4 sm:mb-6 text-epic">
             <span className="text-gradient-desert">Freiheit pur</span> – 
             <span className="text-white"> Dein Roadmovie wird Realität</span>
           </h2>
-          <p className="text-xl md:text-2xl text-desert-sand max-w-4xl mx-auto leading-relaxed">
+          <p className="text-base sm:text-xl md:text-2xl text-desert-sand max-w-4xl mx-auto leading-relaxed">
             Stell dir vor: Der Wind peitscht dir ins Gesicht, der Motor deiner Harley brummt kraftvoll unter dir, 
             während sich die unendliche Weite des amerikanischen Südwestens vor dir ausbreitet. 
             Dies ist nicht nur eine Reise – es ist das Abenteuer deines Lebens.
@@ -28,17 +28,17 @@ export function EmotionalStorySection() {
         </div>
 
         {/* Storytelling Content */}
-        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
+        <div className="grid md:grid-cols-2 gap-6 sm:gap-8 md:gap-12 items-center mb-12 md:mb-16 px-4">
           <div className="space-y-4 sm:space-y-6">
-            <h3 className="text-2xl sm:text-3xl font-bold text-sunset-orange">
+            <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-sunset-orange">
               Staub, Neonlichter und Naturgewalten
             </h3>
-            <p className="text-base sm:text-lg text-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed">
               Von den blinkenden Casino-Lichtern von Las Vegas führt dich deine Route durch karge Wüstenlandschaften, 
               vorbei an imposanten roten Felsen und durch Schluchten, die Millionen von Jahren Geschichte erzählen. 
               Jeder Kilometer auf der legendären Route 66 ist ein Stück amerikanischer Freiheit.
             </p>
-            <p className="text-base sm:text-lg text-foreground leading-relaxed">
+            <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed">
               Du wirst Orte sehen, die Hollywood-Filme berühmt gemacht haben, Panoramen erleben, 
               die dich sprachlos machen, und Momente sammeln, die ein Leben lang in deiner Erinnerung bleiben.
             </p>

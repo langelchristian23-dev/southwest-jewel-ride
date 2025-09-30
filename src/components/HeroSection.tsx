@@ -18,8 +18,8 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 min-h-screen flex items-center justify-center">
-        <div className="max-w-5xl mx-auto text-center animate-slide-up py-12">
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-epic leading-tight">
+        <div className="max-w-5xl mx-auto text-center animate-slide-up py-8 sm:py-12">
+            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold mb-4 sm:mb-6 text-epic leading-tight px-4">
               <span className="text-pure-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Süd-West Juwelen</span>
               <br />
               <span className="text-pure-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Auf zwei Rädern durch</span>
@@ -27,13 +27,13 @@ export function HeroSection() {
               <span className="text-canyon-red drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Amerikas Naturwunder</span>
             </h1>
             
-            <p className="text-lg md:text-xl mb-8 text-off-white leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] max-w-3xl mx-auto">
+            <p className="text-base sm:text-lg md:text-xl mb-6 sm:mb-8 text-off-white leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] max-w-3xl mx-auto px-4">
               Von den glitzernden Lichtern von Las Vegas bis zu den endlosen Weiten des Monument Valley – 
               erlebe die schönsten Nationalparks des Südwestens auf deiner Traum-Motorradreise.
             </p>
 
             {/* USP Bullet Points */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 max-w-2xl mx-auto">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-2 sm:gap-3 md:gap-4 mb-6 sm:mb-8 max-w-2xl mx-auto px-4">
               {[
                 "Geführte Tour mit 2 Guides",
                 "Komfortable Hotels & Casino-Nächte in Las Vegas",
@@ -48,11 +48,11 @@ export function HeroSection() {
             </div>
 
             {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center px-4">
               <WhatsAppButton 
                 text="Jetzt Infos per WhatsApp sichern"
                 size="lg"
-                className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto"
+                className="text-sm sm:text-base md:text-lg px-4 sm:px-6 md:px-8 py-3 sm:py-4 w-full sm:w-auto"
               />
             </div>
         </div>
