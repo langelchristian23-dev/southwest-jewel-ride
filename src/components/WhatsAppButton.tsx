@@ -32,8 +32,8 @@ export function WhatsAppButton({
         ${className}
       `}
     >
-      {showIcon && <MessageCircle className="w-5 h-5" />}
-      {!sticky && text}
+      {showIcon && <MessageCircle className="w-5 h-5 hidden sm:inline-block" />}
+      {!sticky && <span className="truncate">{text}</span>}
     </Button>
   );
 }

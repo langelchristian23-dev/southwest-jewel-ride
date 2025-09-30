@@ -88,11 +88,11 @@ export function TestimonialsSection() {
                 className="bg-card rounded-xl md:rounded-2xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 transform hover:scale-105"
               >
                 {/* Image Header */}
-                <div className="relative h-48 sm:h-56">
+                <div className="relative h-48 sm:h-56 overflow-hidden">
                   <img 
                     src={testimonial.image}
                     alt={`${testimonial.name} - Amerika Heller Teilnehmer`}
-                    className="w-full h-full object-cover object-center"
+                    className="w-full h-full object-cover object-top"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
                   <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
