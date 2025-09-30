@@ -56,7 +56,7 @@ export function Footer() {
             <WhatsAppButton 
               text="Jetzt Infos per WhatsApp sichern"
               size="sm"
-              className="w-full justify-center"
+              className="mx-auto w-auto"
               showIcon={false}
             />
           </div>
