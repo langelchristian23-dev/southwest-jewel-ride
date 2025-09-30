@@ -18,8 +18,8 @@ export function HeroSection() {
 
       {/* Content */}
       <div className="relative z-20 container mx-auto px-4 min-h-screen flex items-center justify-center">
-        <div className="max-w-5xl mx-auto text-center animate-slide-up">
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-epic leading-tight">
+        <div className="max-w-5xl mx-auto text-center animate-slide-up py-12">
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold mb-6 text-epic leading-tight">
               <span className="text-pure-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Süd-West Juwelen</span>
               <br />
               <span className="text-pure-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Auf zwei Rädern durch</span>
@@ -27,22 +27,22 @@ export function HeroSection() {
               <span className="text-canyon-red drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Amerikas Naturwunder</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-off-white leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
+            <p className="text-lg md:text-xl mb-8 text-off-white leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)] max-w-3xl mx-auto">
               Von den glitzernden Lichtern von Las Vegas bis zu den endlosen Weiten des Monument Valley – 
               erlebe die schönsten Nationalparks des Südwestens auf deiner Traum-Motorradreise.
             </p>
 
             {/* USP Bullet Points */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 md:gap-4 mb-8 max-w-2xl mx-auto">
               {[
                 "Geführte Tour mit 2 Guides",
                 "Komfortable Hotels & Casino-Nächte in Las Vegas",
                 "Route 66 Highlights & Naturwunder",
                 "Kleingruppen & VIP-Service"
               ].map((usp, index) => (
-                <div key={index} className="flex items-center space-x-3">
-                  <CheckCircle className="w-6 h-6 text-neon-green flex-shrink-0" />
-                  <span className="text-pure-white font-medium">{usp}</span>
+                <div key={index} className="flex items-center justify-center space-x-2">
+                  <CheckCircle className="w-5 h-5 text-neon-green flex-shrink-0" />
+                  <span className="text-pure-white font-medium text-sm md:text-base">{usp}</span>
                 </div>
               ))}
             </div>
@@ -59,8 +59,8 @@ export function HeroSection() {
       </div>
 
       {/* Floating Elements */}
-      <div className="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-20 animate-float">
-        <div className="w-1 h-16 bg-gradient-to-b from-sunset-orange to-transparent rounded-full"></div>
+      <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-20 animate-float hidden md:block">
+        <div className="w-1 h-12 bg-gradient-to-b from-sunset-orange to-transparent rounded-full"></div>
       </div>
     </section>
   );
