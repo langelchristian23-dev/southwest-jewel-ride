@@ -1,14 +1,17 @@
 import { Star, Quote } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
-import grandCanyon from "@/assets/grand-canyon.jpg";
-import monumentValley from "@/assets/monument-valley.jpg";
-import archesDelicateArch from "@/assets/arches-delicate-arch.jpg";
+import testimonialMarcus from "@/assets/testimonial-marcus.jpg";
+import testimonialSandraThomas from "@/assets/testimonial-sandra-thomas.jpg";
+import testimonialFrank from "@/assets/testimonial-frank.jpg";
+import testimonialPetra from "@/assets/testimonial-petra.jpg";
+import testimonialJuergenKlaus from "@/assets/testimonial-juergen-klaus.jpg";
+import testimonialMichael from "@/assets/testimonial-michael.jpg";
 
 const testimonials = [
   {
     name: "Marcus K.",
     location: "Hamburg",
-    image: grandCanyon,
+    image: testimonialMarcus,
     rating: 5,
     text: "Ich habe mich wie in einem Western gefühlt – nur live! Die Fahrt durch das Monument Valley mit meiner Harley war ein Kindheitstraum, der endlich wahr wurde. Reiners Expertise und die perfekte Organisation haben diese Reise unvergesslich gemacht.",
     highlight: "Monument Valley Erlebnis"
@@ -16,7 +19,7 @@ const testimonials = [
   {
     name: "Sandra & Thomas M.",
     location: "München",
-    image: archesDelicateArch,
+    image: testimonialSandraThomas,
     rating: 5,
     text: "Als Ehepaar waren wir skeptisch, ob so eine Motorradtour das Richtige für uns ist. Aber die Gruppe war fantastisch, die Hotels komfortabel und die Landschaften einfach atemberaubend. Der Sonnenaufgang am Grand Canyon – unbeschreiblich!",
     highlight: "Perfekt für Paare"
@@ -24,7 +27,7 @@ const testimonials = [
   {
     name: "Frank R.",
     location: "Köln",
-    image: monumentValley,
+    image: testimonialFrank,
     rating: 5,
     text: "20 Jahre lang habe ich von einer USA-Motorradtour geträumt. Diese Reise hat alle meine Erwartungen übertroffen. Die Route 66, die Nationalparks, die Kameradschaft – ein Lebenstraum wurde wahr. Danke, Reiner!",
     highlight: "Lebenstraum erfüllt"
@@ -32,18 +35,26 @@ const testimonials = [
   {
     name: "Petra W.",
     location: "Berlin",
-    image: grandCanyon,
+    image: testimonialPetra,
     rating: 5,
     text: "Als Solo-Bikerin war ich anfangs nervös. Aber die Gruppe hat mich sofort aufgenommen und Reiner hatte immer ein offenes Ohr. Die Sicherheit stand immer an erster Stelle. Eine Erfahrung, die ich nie vergessen werde!",
     highlight: "Solo-Bikerin sicher unterwegs"
   },
   {
-    name: "Jürgen & Klaus",
+    name: "Jürgen & Klaus B.",
     location: "Stuttgart",
-    image: archesDelicateArch,
+    image: testimonialJuergenKlaus,
     rating: 5,
     text: "Zwei alte Freunde auf dem Trip ihres Lebens! Die Mischung aus spektakulären Landschaften, perfekter Organisation und echtem Biker-Spirit war genau das, was wir gesucht haben. Las Vegas als Finale war das i-Tüpfelchen!",
     highlight: "Freunde-Abenteuer"
+  },
+  {
+    name: "Michael S.",
+    location: "Frankfurt",
+    image: testimonialMichael,
+    rating: 5,
+    text: "Mit 35 Jahren endlich meine erste große USA-Tour – und was für eine! Die Gruppe war super, die Bikes top und die Strecken einfach genial. Besonders beeindruckt hat mich der Arches Nationalpark. Ich komme definitiv wieder!",
+    highlight: "Erste USA-Tour"
   }
 ];
 
@@ -70,29 +81,29 @@ export function TestimonialsSection() {
 
         {/* Testimonials Grid */}
         <div className="max-w-7xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 mb-12 md:mb-16">
             {testimonials.map((testimonial, index) => (
               <div 
                 key={index}
-                className="bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 transform hover:scale-105"
+                className="bg-card rounded-xl md:rounded-2xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 transform hover:scale-105"
               >
                 {/* Image Header */}
-                <div className="relative h-48">
+                <div className="relative h-48 sm:h-56">
                   <img 
                     src={testimonial.image}
-                    alt={`Erlebnis von ${testimonial.name}`}
+                    alt={`${testimonial.name} - Amerika Heller Teilnehmer`}
                     className="w-full h-full object-cover"
                   />
                   <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                  <div className="absolute bottom-4 left-4 right-4">
+                  <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="text-lg font-bold text-white">{testimonial.name}</h3>
-                        <p className="text-sm text-desert-sand">{testimonial.location}</p>
+                        <h3 className="text-base sm:text-lg font-bold text-white">{testimonial.name}</h3>
+                        <p className="text-xs sm:text-sm text-desert-sand">{testimonial.location}</p>
                       </div>
                       <div className="flex space-x-1">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="w-4 h-4 text-sunset-orange fill-current" />
+                          <Star key={i} className="w-3 h-3 sm:w-4 sm:h-4 text-sunset-orange fill-current" />
                         ))}
                       </div>
                     </div>
@@ -100,16 +111,16 @@ export function TestimonialsSection() {
                 </div>
 
                 {/* Content */}
-                <div className="p-6">
-                  <div className="mb-4">
-                    <span className="bg-sunset-orange/20 text-sunset-orange px-3 py-1 rounded-full text-xs font-medium">
+                <div className="p-4 sm:p-6">
+                  <div className="mb-3 sm:mb-4">
+                    <span className="bg-sunset-orange/20 text-sunset-orange px-2 sm:px-3 py-1 rounded-full text-xs font-medium">
                       {testimonial.highlight}
                     </span>
                   </div>
                   
-                  <Quote className="w-6 h-6 text-sunset-orange mb-3" />
-                  <blockquote className="text-foreground italic leading-relaxed">
-                    "{testimonial.text}"
+                  <Quote className="w-5 h-5 sm:w-6 sm:h-6 text-sunset-orange mb-2 sm:mb-3" />
+                  <blockquote className="text-sm sm:text-base text-foreground italic leading-relaxed">
+                    {testimonial.text}
                   </blockquote>
                 </div>
               </div>
@@ -117,7 +128,7 @@ export function TestimonialsSection() {
           </div>
 
           {/* Stats Section */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16 px-4">
             {[
               { number: "500+", label: "Zufriedene Gäste" },
               { number: "20+", label: "Jahre Erfahrung" },
@@ -125,10 +136,10 @@ export function TestimonialsSection() {
               { number: "98%", label: "Weiterempfehlung" }
             ].map((stat, index) => (
               <div key={index} className="text-center">
-                <div className="text-3xl md:text-4xl font-bold text-sunset-orange mb-2">
+                <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-sunset-orange mb-1 sm:mb-2">
                   {stat.number}
                 </div>
-                <div className="text-desert-sand font-medium">
+                <div className="text-xs sm:text-sm md:text-base text-desert-sand font-medium">
                   {stat.label}
                 </div>
               </div>
@@ -136,19 +147,19 @@ export function TestimonialsSection() {
           </div>
 
           {/* Call to Action */}
-          <div className="text-center">
-            <div className="bg-card/30 rounded-2xl p-8 max-w-3xl mx-auto backdrop-blur-sm">
-              <h3 className="text-3xl font-bold text-sunset-orange mb-4">
+          <div className="text-center px-4">
+            <div className="bg-card/30 rounded-xl md:rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto backdrop-blur-sm">
+              <h3 className="text-2xl sm:text-3xl font-bold text-sunset-orange mb-3 sm:mb-4">
                 Werde Teil unserer Abenteurer-Community
               </h3>
-              <p className="text-lg text-foreground mb-6">
+              <p className="text-sm sm:text-base md:text-lg text-foreground mb-4 sm:mb-6">
                 Schließe dich über 500 begeisterten Motorradfahrern an, die bereits 
                 ihre Traumreise durch den amerikanischen Südwesten erlebt haben.
               </p>
               <WhatsAppButton 
                 text="Jetzt Teil der Community werden"
                 size="lg"
-                className="text-lg px-8 py-4"
+                className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
               />
             </div>
           </div>
