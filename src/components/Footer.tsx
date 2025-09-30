@@ -48,7 +48,7 @@ export function Footer() {
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold text-pure-white mb-4">Direkter Kontakt</h4>
             <div className="space-y-4">
-              <p className="text-light-gray mb-3">💬 WhatsApp Sofortige Antwort</p>
+              <p className="text-light-gray mb-3">WhatsApp Sofortige Antwort</p>
               <WhatsAppButton 
                 text="Jetzt Infos per WhatsApp sichern"
                 size="sm"
