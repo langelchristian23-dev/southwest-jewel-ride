@@ -9,6 +9,7 @@ import bryceCanyon from "@/assets/bryce-canyon.jpg";
 import escalanteMountains from "@/assets/escalante-mountains.jpg";
 import zionNationalPark from "@/assets/zion-national-park.jpg";
 import valleyOfFire from "@/assets/valley-of-fire.jpg";
+import forrestGumpPoint from "@/assets/forrest-gump-point.webp";
 
 const timeline = [
   {
@@ -48,7 +49,7 @@ const timeline = [
     title: "Monument Valley - Moab",
     distance: "250 km",
     highlights: ["Forrest Gump Point", "Mexican Hat", "Landschaft pur"],
-    image: archesDelicateArch,
+    image: forrestGumpPoint,
     description: "Am berühmten Forrest Gump Point machst du das obligatorische Foto, bevor es weiter nach Moab geht, dem Tor zu spektakulären Nationalparks."
   },
   {

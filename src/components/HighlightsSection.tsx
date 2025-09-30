@@ -5,7 +5,7 @@ import monumentValley from "@/assets/monument-valley.jpg";
 import archesDelicateArch from "@/assets/arches-delicate-arch.jpg";
 import bryceCanyon from "@/assets/bryce-canyon.jpg";
 import valleyOfFire from "@/assets/valley-of-fire.jpg";
-import zionNationalPark from "@/assets/zion-national-park.jpg";
+import forrestGumpPoint from "@/assets/forrest-gump-point.webp";
 
 const highlights = [
   {
@@ -25,7 +25,7 @@ const highlights = [
   {
     title: "Forrest Gump Point",
     icon: Route,
-    image: monumentValley,
+    image: forrestGumpPoint,
     description: "Der berühmteste Straßenabschnitt der Filmgeschichte – hier endete Forrest Gumps epischer Lauf.",
     features: ["Ikonischer Fotostopp", "Highway 163", "Monument Valley Kulisse"]
   },

@@ -14,6 +14,7 @@ import lasVegasStrip from "@/assets/las-vegas-strip.jpg";
 import route66 from "@/assets/route66.jpg";
 import valleyOfFire from "@/assets/valley-of-fire.jpg";
 import zionNationalPark from "@/assets/zion-national-park.jpg";
+import forrestGumpPoint from "@/assets/forrest-gump-point.webp";
 
 const attractions = [
   {
@@ -38,7 +39,7 @@ const attractions = [
   },
   {
     name: "Forrest Gump Point",
-    image: monumentValley,
+    image: forrestGumpPoint,
     story: "Der berühmteste Straßenabschnitt der Filmgeschichte. Hier endete Forrest Gumps epischer Lauf – und hier beginnt dein unvergessliches Abenteuer."
   },
   {
