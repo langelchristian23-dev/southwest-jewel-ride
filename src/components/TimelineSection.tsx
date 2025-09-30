@@ -7,6 +7,8 @@ import monumentValley from "@/assets/monument-valley.jpg";
 import archesDelicateArch from "@/assets/arches-delicate-arch.jpg";
 import bryceCanyon from "@/assets/bryce-canyon.jpg";
 import escalanteMountains from "@/assets/escalante-mountains.jpg";
+import zionNationalPark from "@/assets/zion-national-park.jpg";
+import valleyOfFire from "@/assets/valley-of-fire.jpg";
 
 const timeline = [
   {
@@ -78,7 +80,7 @@ const timeline = [
     title: "Zion - Las Vegas",
     distance: "320 km", 
     highlights: ["Zion National Park", "Valley of Fire", "Rückkehr"],
-    image: escalanteMountains,
+    image: valleyOfFire,
     description: "Letzte spektakuläre Eindrücke im Zion National Park und Valley of Fire, bevor du triumphierend nach Las Vegas zurückkehrst."
   },
   {
@@ -114,18 +116,18 @@ export function TimelineSection() {
                 <div className="absolute left-8 top-20 w-0.5 h-full bg-gradient-to-b from-sunset-orange to-canyon-red"></div>
               )}
 
-              <div className="grid md:grid-cols-12 gap-6 mb-12">
+              <div className="grid md:grid-cols-12 gap-4 md:gap-6 mb-8 md:mb-12">
                 {/* Day marker */}
                 <div className="md:col-span-2 flex flex-col items-center md:items-start">
-                  <div className="w-16 h-16 bg-sunset-orange rounded-full flex items-center justify-center shadow-glow mb-2 relative z-10">
-                    <Calendar className="w-8 h-8 text-white" />
+                  <div className="w-12 h-12 sm:w-16 sm:h-16 bg-sunset-orange rounded-full flex items-center justify-center shadow-glow mb-2 relative z-10">
+                    <Calendar className="w-6 h-6 sm:w-8 sm:h-8 text-white" />
                   </div>
-                  <span className="text-sunset-orange font-bold text-lg">{day.day}</span>
+                  <span className="text-sunset-orange font-bold text-base sm:text-lg">{day.day}</span>
                 </div>
 
                 {/* Content */}
                 <div className="md:col-span-10">
-                  <div className="bg-card rounded-2xl shadow-card overflow-hidden">
+                  <div className="bg-card rounded-xl md:rounded-2xl shadow-card overflow-hidden">
                     <div className="grid md:grid-cols-2 gap-0">
                       <div className="relative h-64 md:h-auto">
                         <img 
@@ -142,24 +144,24 @@ export function TimelineSection() {
                         </div>
                       </div>
 
-                      <div className="p-6">
-                        <h3 className="text-2xl font-bold text-sunset-orange mb-3">
+                      <div className="p-4 sm:p-6">
+                        <h3 className="text-xl sm:text-2xl font-bold text-sunset-orange mb-2 sm:mb-3">
                           {day.title}
                         </h3>
-                        <p className="text-light-gray mb-4 leading-relaxed">
+                        <p className="text-sm sm:text-base text-light-gray mb-3 sm:mb-4 leading-relaxed">
                           {day.description}
                         </p>
                         
-                        <div className="mb-4">
-                          <h4 className="font-semibold text-pure-white mb-2 flex items-center">
-                            <Camera className="w-4 h-4 mr-2" />
+                        <div className="mb-3 sm:mb-4">
+                          <h4 className="font-semibold text-pure-white mb-2 flex items-center text-sm sm:text-base">
+                            <Camera className="w-3 h-3 sm:w-4 sm:h-4 mr-2" />
                             Highlights:
                           </h4>
                           <div className="flex flex-wrap gap-2">
                             {day.highlights.map((highlight, idx) => (
                               <span 
                                 key={idx}
-                                className="bg-sunset-orange/20 text-sunset-orange px-3 py-1 rounded-full text-sm"
+                                className="bg-sunset-orange/20 text-sunset-orange px-2 sm:px-3 py-1 rounded-full text-xs sm:text-sm"
                               >
                                 {highlight}
                               </span>
@@ -169,7 +171,7 @@ export function TimelineSection() {
 
                         {/* CTA every 2nd day */}
                         {(index + 1) % 2 === 0 && (
-                          <WhatsAppButton text="Tourdetails anfragen" size="sm" />
+                          <WhatsAppButton text="Tourdetails anfragen" size="sm" className="w-full sm:w-auto" />
                         )}
                       </div>
                     </div>

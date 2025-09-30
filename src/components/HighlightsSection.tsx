@@ -4,8 +4,8 @@ import grandCanyon from "@/assets/grand-canyon.jpg";
 import monumentValley from "@/assets/monument-valley.jpg";
 import archesDelicateArch from "@/assets/arches-delicate-arch.jpg";
 import bryceCanyon from "@/assets/bryce-canyon.jpg";
-import lakeMead from "@/assets/lake-mead.jpg";
-import escalanteMountains from "@/assets/escalante-mountains.jpg";
+import valleyOfFire from "@/assets/valley-of-fire.jpg";
+import zionNationalPark from "@/assets/zion-national-park.jpg";
 
 const highlights = [
   {
@@ -46,9 +46,9 @@ const highlights = [
   {
     title: "Valley of Fire",
     icon: Camera,
-    image: lakeMead,
-    description: "Feuerrote Felsformationen, die bei Sonnenuntergang wie Flammen am Himmel brennen.",
-    features: ["Fire Wave", "Elephant Rock", "White Domes"]
+    image: valleyOfFire,
+    description: "Feuerrote Felsformationen, die bei Sonnenuntergang wie Flammen am Himmel brennen. Eine spektakuläre Motorradstrecke durch die Wüste.",
+    features: ["Fire Wave", "Scenic Road", "White Domes"]
   }
 ];
 
@@ -77,41 +77,41 @@ export function HighlightsSection() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 mb-12 md:mb-16">
           {highlights.map((highlight, index) => (
             <div 
               key={index}
-              className="group bg-card rounded-2xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 transform hover:scale-105"
+              className="group bg-card rounded-xl md:rounded-2xl overflow-hidden shadow-card hover:shadow-glow transition-all duration-500 transform hover:scale-105"
             >
-              <div className="relative h-48 overflow-hidden">
+              <div className="relative h-40 sm:h-48 overflow-hidden">
                 <img 
                   src={highlight.image}
                   alt={highlight.title}
                   className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent"></div>
-                <div className="absolute top-4 right-4">
-                  <div className="w-12 h-12 bg-sunset-orange/20 backdrop-blur-sm rounded-full flex items-center justify-center">
-                    <highlight.icon className="w-6 h-6 text-sunset-orange" />
+                <div className="absolute top-3 sm:top-4 right-3 sm:right-4">
+                  <div className="w-10 h-10 sm:w-12 sm:h-12 bg-sunset-orange/20 backdrop-blur-sm rounded-full flex items-center justify-center">
+                    <highlight.icon className="w-5 h-5 sm:w-6 sm:h-6 text-sunset-orange" />
                   </div>
                 </div>
-                <div className="absolute bottom-4 left-4 right-4">
-                  <h3 className="text-xl font-bold text-white mb-2">
+                <div className="absolute bottom-3 sm:bottom-4 left-3 sm:left-4 right-3 sm:right-4">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1 sm:mb-2">
                     {highlight.title}
                   </h3>
                 </div>
               </div>
 
-              <div className="p-6">
-                <p className="text-foreground mb-4 leading-relaxed">
+              <div className="p-4 sm:p-6">
+                <p className="text-sm sm:text-base text-foreground mb-3 sm:mb-4 leading-relaxed">
                   {highlight.description}
                 </p>
                 
-                <div className="space-y-2 mb-6">
+                <div className="space-y-2">
                   {highlight.features.map((feature, idx) => (
                     <div key={idx} className="flex items-center">
-                      <Star className="w-4 h-4 text-sunset-orange mr-2 flex-shrink-0" />
-                      <span className="text-sm text-muted-foreground">{feature}</span>
+                      <Star className="w-3 h-3 sm:w-4 sm:h-4 text-sunset-orange mr-2 flex-shrink-0" />
+                      <span className="text-xs sm:text-sm text-muted-foreground">{feature}</span>
                     </div>
                   ))}
                 </div>
@@ -121,19 +121,19 @@ export function HighlightsSection() {
         </div>
 
         {/* CTA Section */}
-        <div className="text-center">
-          <div className="bg-gradient-to-r from-sunset-orange/10 to-canyon-red/10 rounded-2xl p-8 max-w-3xl mx-auto backdrop-blur-sm border border-sunset-orange/20">
-            <h3 className="text-3xl font-bold text-sunset-orange mb-4">
+        <div className="text-center px-4">
+          <div className="bg-gradient-to-r from-sunset-orange/10 to-canyon-red/10 rounded-xl md:rounded-2xl p-6 sm:p-8 max-w-3xl mx-auto backdrop-blur-sm border border-sunset-orange/20">
+            <h3 className="text-2xl sm:text-3xl font-bold text-sunset-orange mb-3 sm:mb-4">
               Erlebe alle Highlights auf einer Tour
             </h3>
-            <p className="text-lg text-foreground mb-6">
+            <p className="text-sm sm:text-base md:text-lg text-foreground mb-4 sm:mb-6">
               Statt einzelne Stopps zu planen, erlebst du alle diese spektakulären Orte 
               auf einer perfekt organisierten Route mit erfahrenen Guides.
             </p>
             <WhatsAppButton 
               text="Jetzt Tourinfos via WhatsApp sichern"
               size="lg"
-              className="text-lg px-8 py-4"
+              className="text-base sm:text-lg px-6 sm:px-8 py-3 sm:py-4 w-full sm:w-auto"
             />
           </div>
         </div>

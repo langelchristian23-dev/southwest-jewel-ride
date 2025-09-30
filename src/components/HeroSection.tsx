@@ -1,8 +1,8 @@
 import { Button } from "@/components/ui/button";
 import { WhatsAppButton } from "./WhatsAppButton";
 import { CheckCircle } from "lucide-react";
-import monumentValley from "@/assets/monument-valley.jpg";
-import grandCanyon from "@/assets/grand-canyon.jpg";
+import valleyOfFire from "@/assets/valley-of-fire.jpg";
+import zionNationalPark from "@/assets/zion-national-park.jpg";
 
 export function HeroSection() {
   return (
@@ -14,11 +14,11 @@ export function HeroSection() {
       <div className="absolute inset-0 grid md:grid-cols-2 gap-0">
         <div 
           className="bg-cover bg-center opacity-80"
-          style={{ backgroundImage: `url(${monumentValley})` }}
+          style={{ backgroundImage: `url(${valleyOfFire})` }}
         ></div>
         <div 
           className="bg-cover bg-center opacity-80 hidden md:block"
-          style={{ backgroundImage: `url(${grandCanyon})` }}
+          style={{ backgroundImage: `url(${zionNationalPark})` }}
         ></div>
       </div>
 
@@ -30,15 +30,15 @@ export function HeroSection() {
           
           {/* Right side - Content */}
           <div className="md:pl-8 text-center md:text-left animate-slide-up">
-            <h1 className="text-5xl md:text-7xl font-bold mb-6 text-epic">
-              <span className="text-pure-white">Süd-West Juwelen</span>
+            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 text-epic leading-tight">
+              <span className="text-pure-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Süd-West Juwelen</span>
               <br />
-              <span className="text-pure-white">Auf zwei Rädern durch</span>
+              <span className="text-pure-white drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Auf zwei Rädern durch</span>
               <br />
-              <span className="text-canyon-red">Amerikas Naturwunder</span>
+              <span className="text-canyon-red drop-shadow-[0_2px_10px_rgba(0,0,0,0.8)]">Amerikas Naturwunder</span>
             </h1>
             
-            <p className="text-xl md:text-2xl mb-8 text-off-white leading-relaxed">
+            <p className="text-xl md:text-2xl mb-8 text-off-white leading-relaxed drop-shadow-[0_2px_6px_rgba(0,0,0,0.9)]">
               Von den glitzernden Lichtern von Las Vegas bis zu den endlosen Weiten des Monument Valley – 
               erlebe die schönsten Nationalparks des Südwestens auf deiner Traum-Motorradreise.
             </p>
@@ -63,11 +63,8 @@ export function HeroSection() {
               <WhatsAppButton 
                 text="Jetzt Infos per WhatsApp sichern"
                 size="lg"
-                className="text-lg px-8 py-4"
+                className="text-base sm:text-lg px-6 sm:px-8 py-4 w-full sm:w-auto"
               />
-              <Button variant="hero" size="lg" className="px-8 py-4">
-                Tour-Details entdecken
-              </Button>
             </div>
           </div>
         </div>

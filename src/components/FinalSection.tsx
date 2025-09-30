@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { Clock, Calendar, Star } from "lucide-react";
 import { WhatsAppButton } from "./WhatsAppButton";
-import { Button } from "@/components/ui/button";
 import monumentValleySunset from "@/assets/monument-valley.jpg";
 
 export function FinalSection() {
@@ -61,14 +60,14 @@ export function FinalSection() {
           </div>
 
           {/* Countdown */}
-          <div className="mb-12">
-            <div className="bg-card/20 backdrop-blur-sm rounded-2xl p-8 max-w-2xl mx-auto border border-sunset-orange/20">
-              <h3 className="text-2xl font-bold text-sunset-orange mb-6 flex items-center justify-center">
-                <Calendar className="w-6 h-6 mr-3" />
+          <div className="mb-12 px-4">
+            <div className="bg-card/20 backdrop-blur-sm rounded-2xl p-4 sm:p-8 max-w-2xl mx-auto border border-sunset-orange/20">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-sunset-orange mb-4 sm:mb-6 flex items-center justify-center">
+                <Calendar className="w-5 h-5 sm:w-6 sm:h-6 mr-2 sm:mr-3" />
                 Nächste Tour startet in:
               </h3>
               
-              <div className="grid grid-cols-4 gap-4 mb-6">
+              <div className="grid grid-cols-4 gap-2 sm:gap-4 mb-4 sm:mb-6">
                 {[
                   { label: "Tage", value: timeLeft.days },
                   { label: "Stunden", value: timeLeft.hours },
@@ -76,12 +75,12 @@ export function FinalSection() {
                   { label: "Sekunden", value: timeLeft.seconds }
                 ].map((item, index) => (
                   <div key={index} className="text-center">
-                    <div className="bg-sunset-orange rounded-lg p-4 mb-2">
-                      <span className="text-2xl md:text-3xl font-bold text-white">
+                    <div className="bg-sunset-orange rounded-lg p-2 sm:p-4 mb-1 sm:mb-2">
+                      <span className="text-xl sm:text-2xl md:text-3xl font-bold text-white">
                         {item.value.toString().padStart(2, '0')}
                       </span>
                     </div>
-                    <span className="text-sm text-desert-sand font-medium">
+                    <span className="text-xs sm:text-sm text-desert-sand font-medium">
                       {item.label}
                     </span>
                   </div>
@@ -96,8 +95,8 @@ export function FinalSection() {
           </div>
 
           {/* Epic Benefits */}
-          <div className="mb-12">
-            <div className="grid md:grid-cols-3 gap-6 max-w-4xl mx-auto">
+          <div className="mb-12 px-4">
+            <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 max-w-4xl mx-auto">
               {[
                 {
                   icon: Star,
@@ -115,10 +114,10 @@ export function FinalSection() {
                   description: "Optimale Wetterbedingungen und Temperaturen"
                 }
               ].map((benefit, index) => (
-                <div key={index} className="bg-card/20 backdrop-blur-sm rounded-xl p-6">
-                  <benefit.icon className="w-8 h-8 text-sunset-orange mx-auto mb-3" />
-                  <h4 className="font-bold text-white mb-2">{benefit.title}</h4>
-                  <p className="text-sm text-desert-sand">{benefit.description}</p>
+                <div key={index} className="bg-card/20 backdrop-blur-sm rounded-xl p-4 sm:p-6">
+                  <benefit.icon className="w-6 h-6 sm:w-8 sm:h-8 text-sunset-orange mx-auto mb-2 sm:mb-3" />
+                  <h4 className="font-bold text-white mb-1 sm:mb-2 text-sm sm:text-base">{benefit.title}</h4>
+                  <p className="text-xs sm:text-sm text-desert-sand">{benefit.description}</p>
                 </div>
               ))}
             </div>
@@ -127,35 +126,18 @@ export function FinalSection() {
           {/* Main CTA */}
           <div className="mb-12">
             <div className="space-y-6">
-              <WhatsAppButton 
+               <WhatsAppButton 
                 text="🏍️ JETZT PLATZ SICHERN - WhatsApp"
                 size="lg"
-                className="text-xl px-12 py-6 shadow-epic hover:shadow-glow transform hover:scale-105 transition-all duration-300"
+                className="text-base sm:text-lg md:text-xl px-6 sm:px-12 py-4 sm:py-6 shadow-epic hover:shadow-glow transform hover:scale-105 transition-all duration-300 w-full sm:w-auto"
               />
-              <p className="text-lg text-desert-sand">
+              <p className="text-sm sm:text-base md:text-lg text-desert-sand px-4">
                 <strong className="text-sunset-orange">+1 702 277 1976</strong> – 
                 Reiner antwortet persönlich binnen weniger Minuten
               </p>
             </div>
           </div>
 
-          {/* Secondary CTAs */}
-          <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-            <Button 
-              variant="hero" 
-              size="lg"
-              className="px-8 py-4"
-            >
-              📞 Kostenloses Beratungsgespräch
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg"
-              className="px-8 py-4 border-sunset-orange text-sunset-orange hover:bg-sunset-orange hover:text-white"
-            >
-              📧 Detaillierte Reiseunterlagen
-            </Button>
-          </div>
 
           {/* Trust Signals */}
           <div className="bg-card/10 backdrop-blur-sm rounded-xl p-6 max-w-3xl mx-auto">

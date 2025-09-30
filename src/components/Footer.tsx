@@ -18,9 +18,9 @@ export function Footer() {
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold text-pure-white mb-4">Rechtliches</h4>
             <ul className="space-y-2">
-              <li><a href="#impressum" className="text-light-gray hover:text-pure-white transition-colors">Impressum</a></li>
-              <li><a href="#kontakt" className="text-light-gray hover:text-pure-white transition-colors">Kontakt</a></li>
-              <li><a href="#agb" className="text-light-gray hover:text-pure-white transition-colors">AGBs</a></li>
+              <li><a href="https://amerika-heller.de/impressum/" target="_blank" rel="noopener noreferrer" className="text-light-gray hover:text-pure-white transition-colors">Impressum</a></li>
+              <li><a href="https://amerika-heller.de/kontakt/" target="_blank" rel="noopener noreferrer" className="text-light-gray hover:text-pure-white transition-colors">Kontakt</a></li>
+              <li><a href="https://amerika-heller.de/agbs/" target="_blank" rel="noopener noreferrer" className="text-light-gray hover:text-pure-white transition-colors">AGBs</a></li>
             </ul>
           </div>
 
@@ -48,14 +48,12 @@ export function Footer() {
           <div className="md:col-span-1">
             <h4 className="text-lg font-semibold text-pure-white mb-4">Direkter Kontakt</h4>
             <div className="space-y-4">
-              <div>
-                <p className="text-light-gray mb-3">💬 WhatsApp Sofortige Antwort</p>
-                <WhatsAppButton 
-                  text="Jetzt WhatsApp Chat"
-                  size="sm"
-                  className="w-full"
-                />
-              </div>
+              <p className="text-light-gray mb-3">💬 WhatsApp Sofortige Antwort</p>
+              <WhatsAppButton 
+                text="Jetzt Infos per WhatsApp sichern"
+                size="sm"
+                className="w-full"
+              />
             </div>
           </div>
         </div>

@@ -11,6 +11,9 @@ import bryceCanyon from "@/assets/bryce-canyon.jpg";
 import escalanteMountains from "@/assets/escalante-mountains.jpg";
 import lakeMead from "@/assets/lake-mead.jpg";
 import lasVegasStrip from "@/assets/las-vegas-strip.jpg";
+import route66 from "@/assets/route66.jpg";
+import valleyOfFire from "@/assets/valley-of-fire.jpg";
+import zionNationalPark from "@/assets/zion-national-park.jpg";
 
 const attractions = [
   {
@@ -19,9 +22,9 @@ const attractions = [
     story: "Ein Meisterwerk der Ingenieurskunst – dieser gewaltige Damm zwischen Nevada und Arizona ist ein Symbol menschlicher Schaffenskraft. Die Fahrt dorthin ist bereits ein Erlebnis für sich."
   },
   {
-    name: "Oatman Historic Route 66",
-    image: grandCanyon,
-    story: "Eine Geisterstadt mit wilden Eseln, die frei durch die Straßen wandeln. Hier spürst du die authentische Route 66 Atmosphäre vergangener Zeiten."
+    name: "Oatman & Seligman Route 66",
+    image: route66,
+    story: "Die legendäre Route 66! In Seligman und Oatman spürst du die authentische Atmosphäre vergangener Zeiten. Wilde Esel wandeln frei durch die Straßen dieser historischen Städte."
   },
   {
     name: "Grand Canyon Nationalpark",
@@ -55,13 +58,13 @@ const attractions = [
   },
   {
     name: "Zion Nationalpark", 
-    image: escalanteMountains,
-    story: "Majestätische Sandstein-Klippen und smaragdgrüne Pools schaffen eine Oase in der Wüste Utahs."
+    image: zionNationalPark,
+    story: "Majestätische Sandstein-Klippen und kurvenreiche Straßen schaffen eine Oase in der Wüste Utahs. Die Fahrt durch diesen Park ist pure Motorrad-Magie."
   },
   {
     name: "Valley of Fire",
-    image: lakeMead,
-    story: "Feuerrote Felsformationen, die bei Sonnenuntergang wie Flammen leuchten. Ein wahrhaft mystischer Ort."
+    image: valleyOfFire,
+    story: "Feuerrote Felsformationen, die bei Sonnenuntergang wie Flammen leuchten. Die Straße durch diesen Park ist ein Traum für jeden Biker."
   },
   {
     name: "Las Vegas Strip",
@@ -104,8 +107,8 @@ export function AttractionsSection() {
             >
               {attractions.map((attraction, index) => (
                 <div key={index} className="w-full flex-shrink-0">
-                  <div className="grid md:grid-cols-2 gap-0 min-h-[500px]">
-                    <div className="relative">
+                  <div className="grid md:grid-cols-2 gap-0 min-h-[400px] sm:min-h-[500px]">
+                    <div className="relative h-48 sm:h-64 md:h-auto">
                       <img 
                         src={attraction.image}
                         alt={attraction.name}
@@ -113,17 +116,17 @@ export function AttractionsSection() {
                       />
                       <div className="absolute inset-0 bg-gradient-to-r from-black/50 to-transparent"></div>
                     </div>
-                    <div className="bg-card p-8 md:p-12 flex flex-col justify-center">
-                      <div className="flex items-center mb-4">
-                        <MapPin className="w-6 h-6 text-sunset-orange mr-3" />
-                        <h3 className="text-2xl md:text-3xl font-bold text-sunset-orange">
+                    <div className="bg-card p-6 sm:p-8 md:p-12 flex flex-col justify-center">
+                      <div className="flex items-center mb-3 sm:mb-4">
+                        <MapPin className="w-5 h-5 sm:w-6 sm:h-6 text-sunset-orange mr-2 sm:mr-3 flex-shrink-0" />
+                        <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-sunset-orange">
                           {attraction.name}
                         </h3>
                       </div>
-                      <p className="text-lg text-foreground leading-relaxed mb-6">
+                      <p className="text-sm sm:text-base md:text-lg text-foreground leading-relaxed mb-4 sm:mb-6">
                         {attraction.story}
                       </p>
-                      <WhatsAppButton text="Mehr über diese Tour erfahren" />
+                      <WhatsAppButton text="Mehr über diese Tour erfahren" className="w-full sm:w-auto" />
                     </div>
                   </div>
                 </div>

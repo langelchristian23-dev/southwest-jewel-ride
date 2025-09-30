@@ -28,21 +28,21 @@ export function EmotionalStorySection() {
         </div>
 
         {/* Storytelling Content */}
-        <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
-          <div className="space-y-6">
-            <h3 className="text-3xl font-bold text-sunset-orange">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center mb-12 md:mb-16">
+          <div className="space-y-4 sm:space-y-6">
+            <h3 className="text-2xl sm:text-3xl font-bold text-sunset-orange">
               Staub, Neonlichter und Naturgewalten
             </h3>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-foreground leading-relaxed">
               Von den blinkenden Casino-Lichtern von Las Vegas führt dich deine Route durch karge Wüstenlandschaften, 
               vorbei an imposanten roten Felsen und durch Schluchten, die Millionen von Jahren Geschichte erzählen. 
               Jeder Kilometer auf der legendären Route 66 ist ein Stück amerikanischer Freiheit.
             </p>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-foreground leading-relaxed">
               Du wirst Orte sehen, die Hollywood-Filme berühmt gemacht haben, Panoramen erleben, 
               die dich sprachlos machen, und Momente sammeln, die ein Leben lang in deiner Erinnerung bleiben.
             </p>
-            <WhatsAppButton text="Diese Erfahrung jetzt sichern" />
+            <WhatsAppButton text="Diese Erfahrung jetzt sichern" className="w-full sm:w-auto" />
           </div>
           <div className="grid grid-cols-2 gap-4">
             <img 
@@ -59,8 +59,8 @@ export function EmotionalStorySection() {
         </div>
 
         {/* Second Row */}
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <div className="grid grid-cols-2 gap-4 order-2 md:order-1">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
+          <div className="grid grid-cols-2 gap-3 sm:gap-4 order-2 md:order-1">
             <img 
               src={escalanteMountains} 
               alt="Kurvenreiche Straße durch rote Felsen" 
@@ -69,23 +69,23 @@ export function EmotionalStorySection() {
             <img 
               src={lakeMead} 
               alt="Lake Mead Panorama" 
-              className="rounded-lg shadow-card hover:shadow-glow transition-all duration-300 mt-8"
+              className="rounded-lg shadow-card hover:shadow-glow transition-all duration-300 mt-6 sm:mt-8"
             />
           </div>
-          <div className="space-y-6 order-1 md:order-2">
-            <h3 className="text-3xl font-bold text-canyon-red">
+          <div className="space-y-4 sm:space-y-6 order-1 md:order-2">
+            <h3 className="text-2xl sm:text-3xl font-bold text-canyon-red">
               Jede Kurve eine neue Überraschung
             </h3>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-foreground leading-relaxed">
               Morgens wachst du in einem komfortablen Hotel auf, nachmittags stehst du am Rand des Grand Canyon 
               und abends genießt du ein kühles Bier in einer historischen Route 66 Taverne. 
               Diese Reise bietet dir die perfekte Mischung aus Abenteuer und Komfort.
             </p>
-            <p className="text-lg text-foreground leading-relaxed">
+            <p className="text-base sm:text-lg text-foreground leading-relaxed">
               Mit erfahrenen Guides an deiner Seite entdeckst du versteckte Juwelen abseits der Touristenpfade 
               und erlebst den wahren Spirit des amerikanischen Westens.
             </p>
-            <WhatsAppButton text="Jetzt Traumreise planen" />
+            <WhatsAppButton text="Jetzt Traumreise planen" className="w-full sm:w-auto" />
           </div>
         </div>
       </div>
